@@ -1,0 +1,4 @@
+*.pyc
+portfolio/
+portfolioLinux/
+.env

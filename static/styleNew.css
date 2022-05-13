@@ -1,0 +1,551 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'ponde';
+  src: url("fonts/ponde.tff") format("truetype");
+}
+
+@font-face {
+  font-family: 'RetroGaming';
+  src: url("fonts/RetroGaming.tff") format("truetype");
+}
+
+/* scrollbar*/
+::-webkit-scrollbar {
+  background: rgba(0, 107, 56, 0.25);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1rem grey;
+          box-shadow: inset 0 0 1rem grey;
+  border-radius: 2rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 107, 56, 0.6);
+}
+
+body {
+  font-family: 'RetroGaming';
+  background: url("../static/pics/bgART.jpg");
+  background-attachment: fixed;
+  background-color: rgba(16, 24, 32, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+nav {
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(2, 37, 20, 0.1);
+  -webkit-box-shadow: 1.5rem;
+          box-shadow: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'ponde';
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  width: 100%;
+}
+
+.nav-li-flex {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  list-style-type: none;
+  margin-left: 53.5rem;
+}
+
+.nav-li-flex li {
+  text-shadow: 2px 2px 5px black;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+  padding: 0.2rem 0.8rem 0rem 0.8rem;
+  padding-top: 0.8rem;
+}
+
+.nav-li-flex li :hover {
+  background: rgba(161, 255, 20, 0.6);
+  color: whitesmoke;
+}
+
+.nav-li-flex li a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0.8rem;
+}
+
+.nav-li-flex li a:hover, .nav-li-flex li a:visited, .nav-li-flex li a:link, .nav-li-flex li a:active {
+  text-decoration: none;
+}
+
+h4 {
+  font-family: 'Space Mono';
+  font-size: 1.8rem;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: right;
+  padding-left: 1rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  color: whitesmoke;
+  /*color: rgba(161, 255, 20, 0.8);*/
+}
+
+h2 {
+  font-size: 4rem;
+  color: rgba(161, 255, 20, 0.8);
+  text-align: right;
+}
+
+.nameBlock {
+  /*font-family: 'Press Start 2P', cursive;*/
+  color: whitesmoke;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 15rem;
+  margin-left: 12rem;
+  letter-spacing: 0.5rem;
+  text-shadow: 3px 3px 8px black;
+  text-align: left;
+}
+
+.skillBlock, .workBlock, .blogBlock {
+  margin-top: 220vh;
+  margin-right: 5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-shadow: 3px 3px 8px black;
+  -webkit-animation: fadeIn 4s ease;
+          animation: fadeIn 4s ease;
+}
+
+#nameTag {
+  color: rgba(161, 255, 20, 0.8);
+  font-size: 4rem;
+}
+
+#skill {
+  margin-top: 120vh;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30vw;
+  margin-right: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#skill h2 {
+  margin-top: 45vh;
+  margin-bottom: 10vh;
+}
+
+#work {
+  margin-top: 120vh;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#work h2 {
+  margin-top: 45vh;
+  margin-bottom: 10vh;
+}
+
+.skillBlock #skillTag {
+  color: rgba(161, 255, 20, 0.8);
+  font-size: 1.8rem;
+}
+
+.skillBlock h4 {
+  font-size: 1.8rem;
+}
+
+.skillBlock h2 {
+  font-size: 3rem;
+  color: rgba(161, 255, 20, 0.8);
+  text-align: right;
+}
+
+#workTag {
+  color: rgba(161, 255, 20, 0.8);
+  font-size: 2.2rem;
+  margin-top: 3vh;
+  margin-left: 20vw;
+}
+
+h1 {
+  font-family: 'RetroGaming';
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+}
+
+h3 {
+  font-family: 'Space Mono';
+  font-size: 1.8rem;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  color: whitesmoke;
+  /*color: rgba(161, 255, 20, 0.8);*/
+}
+
+h5 {
+  font-family: 'RetroGaming';
+  font-size: 4rem;
+  text-align: center;
+}
+
+.skill-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skill-card .left-pane {
+  margin-top: 2rem;
+}
+
+.skill-card .left-pane .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  color: whitesmoke;
+  overflow: hidden;
+  border: 0.2rem solid rgba(11, 11, 11, 0.8);
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-top: 5rem;
+}
+
+.skill-card .left-pane .card .card-text {
+  background-color: rgba(11, 11, 11, 0.8);
+  padding: 3rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 20rem;
+}
+
+.skill-card .left-pane .card .card-text .card-title {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+.skill-card .left-pane .card .card-text .card-title a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: rgba(161, 255, 20, 0.8);
+}
+
+.skill-card .left-pane .card .card-text ul {
+  padding-top: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.skill-card .left-pane .card .card-text ul li {
+  text-decoration: none;
+  list-style-type: none;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.skill-card .right-pane {
+  margin-top: 3.5rem;
+}
+
+.skill-card .right-pane .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  color: whitesmoke;
+  overflow: hidden;
+  border: 0.2rem solid rgba(11, 11, 11, 0.8);
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-card .right-pane .card .card-text {
+  background-color: rgba(11, 11, 11, 0.8);
+  padding: 1.5rem;
+  text-align: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.skill-card .right-pane .card .card-text .card-title {
+  font-size: 1.25rem;
+}
+
+.skill-card .right-pane .card .card-text .card-title a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: rgba(161, 255, 20, 0.8);
+}
+
+.skill-card .right-pane .card .card-text ul {
+  padding-top: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.skill-card .right-pane .card .card-text ul li {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4rem;
+  margin-top: 13vh;
+  margin-left: 2vw;
+}
+
+.projects .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  color: whitesmoke;
+  overflow: hidden;
+  border: 0.2rem solid rgba(11, 11, 11, 0.8);
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-top: 5rem;
+}
+
+.projects .card :hover {
+  -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.6);
+          box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.projects .card .card-text {
+  background-color: rgba(11, 11, 11, 0.85);
+  padding: 0.5rem;
+  text-align: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  max-width: 20rem;
+}
+
+.projects .card .card-text .card-title {
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
+}
+
+.projects .card .card-text .card-title a {
+  text-decoration: none;
+  color: rgba(161, 255, 20, 0.8);
+}
+
+.projects .card .card-text .card-subtext {
+  padding-top: 0.3rem;
+}
+
+.projects .card img {
+  max-width: 20rem;
+  min-height: 18rem;
+  max-height: 18rem;
+}
+
+h6 {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: rgba(82, 119, 101, 0.1);
+  padding: 4em 0.5rem 0.5rem 0.5rem;
+}
+
+.transition1 {
+  position: absolute;
+  z-index: 100;
+  margin-top: 25vh;
+  margin-left: 70vw;
+}
+
+.transition1 button {
+  background: rgba(161, 255, 20, 0.8);
+  padding: 0.5rem;
+  font-family: 'RetroGaming';
+  -webkit-animation: blink 1.5s step-start 0s infinite;
+          animation: blink 1.5s step-start 0s infinite;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.transition1 a {
+  text-decoration: none;
+  color: #030000;
+  padding: 1rem;
+}
+
+.transition2 {
+  margin-top: 25vh;
+  margin-left: 80vw;
+}
+
+.transition2 button {
+  background: rgba(161, 255, 20, 0.8);
+  padding: 0.5rem;
+  font-family: 'RetroGaming';
+  -webkit-animation: blink 1.5s step-start 0s infinite;
+          animation: blink 1.5s step-start 0s infinite;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  opacity: 0;
+}
+
+.transition2 a {
+  text-decoration: none;
+  color: #030000;
+  padding: 1rem;
+}
+
+.transition3 {
+  margin-left: 80vw;
+}
+
+.transition3 button {
+  margin-top: 10vh;
+  background: rgba(161, 255, 20, 0.8);
+  padding: 0.5rem;
+  font-family: 'RetroGaming';
+  -webkit-animation: blink 1.5s step-start 0s infinite;
+          animation: blink 1.5s step-start 0s infinite;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.transition3 a {
+  text-decoration: none;
+  color: #030000;
+  padding: 1rem;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=styleNew.css.map */

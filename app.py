@@ -1,8 +1,12 @@
-import webbrowser
-from flask import Flask, render_template
-
-
+from flask import Flask, render_template, redirect
 app = Flask(__name__, template_folder="templates")
+
+
+globals = {
+            'NESRemu' : 'https://github.com/dastkd69/NESRemu',
+            'NESRemu' : 'https://github.com/dastkd69/NESRemu',
+            'NESRemu' : 'https://github.com/dastkd69/NESRemu'
+}
 
 
 @app.route("/", methods=["GET"])
@@ -15,16 +19,17 @@ def showAchievements():
 
 @app.route("/blog", methods=["GET"])
 def showBlog():
-    return webbrowser.open('https://zenxt.data.blog/', autoraise=True)
+    return redirect('https://zenxt.data.blog/')
 
 @app.route("/github", methods=["GET"])
 def showGithub():
-    return webbrowser.open('https://github.com/dastkd69', autoraise=True)
+    return redirect('https://github.com/dastkd69')
+
+# @app.context_processor
+# def globals():
+#     return globals    
 
 
 
 if __name__ == "__main__":
-    app.run()
-
-
-    
+    app.run(debug=True)
